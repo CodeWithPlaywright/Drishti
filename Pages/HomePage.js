@@ -8,11 +8,12 @@ exports.HomePage = class HomePage {
         this.MyIssue = page.locator("//h3[text()='My Issues']")
         this.DrishtiText=page.locator("//div[text()='Drishti']")
         this.ResetPassword = page.locator("//div[text()='Reset Password']")
+        this.newIssue= page.locator("//button[text()='NEW ISSUES']")
     }
 
     async ClickOnMyIsse() 
     {
-             await this.MyIssue.click()
+        await this.MyIssue.click()
     }
     async ClickOnMyData()
     {
@@ -28,6 +29,10 @@ exports.HomePage = class HomePage {
     async ResetPasswordAction()
     {
         await this.ResetPassword.click()
+    }
+    async clicknewIssue()
+    {
+        await this.newIssue.click()
     }
 
 }
