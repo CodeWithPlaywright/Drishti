@@ -1,6 +1,7 @@
 import {test,expect} from '@playwright/test'
 import { LoginPage } from '../Pages/LoginPage'
 
+
 let login 
 
 test.beforeEach('beforeEach',async({page})=>
@@ -18,6 +19,7 @@ test('Drishti login',async({page})=>
 test('Drishti login By senior management',async({page})=>
   {
     await login.LoginToAppSeniorMgt('seniormanagement@mailinator.com','If@12345')
+    
     
   })
 
