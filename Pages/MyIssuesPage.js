@@ -20,6 +20,9 @@ exports.MyIssuesPage = class MyIssuesPage {
         this.PriorityDropDown = page.locator("//div[text()='Priority']")
         this.AssignDropDownComponents = page.locator("//div[text()='Assign']/..//div[contains(@class,'block border')]")
         this.PriorityDropDownComponents = page.locator("//div[text()='Priority']/..//div[contains(@class,'block border')]")
+        this.LastPage = page.locator("//div[@class='hidden md:-mt-px md:flex']//button[last()]")
+        //this.lastRowSubjectLocator = page.locator(
+        //    "//div[@class='table-row-group']/div[@class='table-row bg-white'][last()]/div[contains(@class, 'table-cell') and contains(@class, 'font-semibold') and contains(@class, 'p-4')]");
 
 
     }
@@ -47,6 +50,19 @@ exports.MyIssuesPage = class MyIssuesPage {
         console.log("Post clicking on cancel button sucessfully navigate to the my issue page")
 
     }
+
+    async ClickOnLastPage() {
+
+        await this.LastPage.waitFor({ state: 'visible', timeout: 10000 });
+        await this.LastPage.click()
+    
+    }
+    async ClickOnHRButton() {
+
+        await this.HRButton.click()
+    
+    }
+
 
 
 }
