@@ -4,10 +4,13 @@ import { LoginPage } from '../Pages/LoginPage'
 
 let login 
 
-test.beforeEach('beforeEach',async({page})=>
+test.beforeEach('beforeEach ',async({page})=>
 {
   login = new LoginPage(page)
   login.LaunchURL()
+},{
+
+  tag: ['@smoke', '@sanity']
 })
 test('Drishti login',async({page})=>
 {
@@ -16,7 +19,7 @@ test('Drishti login',async({page})=>
   
 })
 
-test('Drishti login By senior management',async({page})=>
+test('Drishti login By senior management @smoke',async({page})=>
   {
     await login.LoginToAppSeniorMgt('seniormanagement@mailinator.com','If@12345')
     

@@ -14,7 +14,7 @@ function getRandomString(prefix = 'Test', length = 5) {
 }
 
 
-test.beforeEach('Create New Issues', async ({ page }) => {
+test.beforeEach('Create New Issues @smoke', async ({ page }) => {
 
   loginpage = new LoginPage(page);
   loginpage.LaunchURL();
@@ -25,7 +25,7 @@ test.beforeEach('Create New Issues', async ({ page }) => {
 
 })
 
-test('Create New issue and validate with Sucessful message', async ({ page }) => {
+test('Create New issue and validate with Sucessful message @smoke', async ({ page }) => {
 
   const randomSubject = getRandomString('Subject');
   const randomDescription = getRandomString('Description', 10);
