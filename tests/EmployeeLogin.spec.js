@@ -8,12 +8,12 @@ let homePage;
 let myData;
 const email_ID= 'viju123@mailinator.com'
 const password= 'If@12345'
-test.beforeEach('beforeEach', async ({ page }) => {
+test.beforeEach('beforeEach @smoke', async ({ page }) => {
   login = new LoginPage(page)
 
   login.LaunchURL()
 })
-test('Login to application as Employee', async ({ page }) => {
+test('Login to application as Employee @smoke', async ({ page }) => {
   homePage = new HomePage(page)
   myData = new MyDataHR(page)
   // await page.pause()

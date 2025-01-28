@@ -2,7 +2,7 @@ exports.MyDataHR = class MyDataHR {
 
     constructor(page) {
         this.page = page
-        this.ConsentFormButton = page.locator("//span[text()='Consent Form']")
+        this.ConsentFormButton = page.locator("//span[text()='Consent Form']/..")
         this.search = page.getByPlaceholder("Search...")
         this.viewDetailsCTA = page.locator("//a[text()='View Details']")
         this.employeeIDText = page.locator("//span[text()='Employee ID']/..//span[2]")
@@ -34,4 +34,5 @@ exports.MyDataHR = class MyDataHR {
         await this.ViewDetailsInSnrMgt.click()
 
     }
+    
 }
